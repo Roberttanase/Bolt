@@ -3,7 +3,6 @@
 //Program: Hello World
 //Hardware: Bolt #SB-F28B
 
-
 async function startProgram() {
 	await speak("Hello World", true);
 	setMainLed({ r: 0, g: 0, b: 255});
