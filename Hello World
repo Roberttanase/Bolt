@@ -1,0 +1,13 @@
+//Programmer: Robert Tanase
+//Date: 1.8.2025
+//Program: Hello World
+//Hardware: Bolt #SB-F28B
+
+async function startProgram() {
+	await speak("Almost Saturday", true);
+	setMainLed({ r: 0, g: 15, b: 240});
+	setSpeed(60);
+	await delay (4.25);
+	setSpeed(0);
+
+}
