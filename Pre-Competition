@@ -3,8 +3,8 @@
 //Program: Pre-Competition
 //Hardware: Bolt #SB-F28B
 
-//Start
-//Bolt will say Start acrossed the LED's
+//Start and Say Start
+//Bolt will say Start across the LED's and Say it out loud
 //Driver: Robert Tanase
 //Navigator: Alex Jones
 
@@ -31,3 +31,53 @@
 //Play Sound
 //Driver: Alex Jones
 //Navigator: Robert Tanase
+
+
+async function startProgram() {
+	await speak("Start", true);
+}
+async function displayMessage(bolt, message) {
+  console.log(message); // Display the message
+  await bolt.send(message); // If bolt is an object with a send method, send the message
+}
+class Bolt {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+
+
+async function displayMessageOnBolt() {
+  // Connect to the Bolt (ensure your Bolt is powered on and within range)
+  const bolt = new SpheroBolt();
+  await bolt.connect();
+
+  // Display a message by setting the color of the LED matrix
+  // This example will display a simple message like "Hello" by lighting up certain LEDs.
+
+  // Here we define an array for a simple "Hello" message, represented as pixel colors.
+  // You can customize this part to display different messages.
+  const messageMatrix = [
+    [0, 1, 0, 1, 0, 0, 1, 1],
+    [0, 1, 1, 1, 0, 1, 0, 0],
+    [0, 1, 1, 0, 0, 0, 0, 1],
+    [0, 1, 1, 1, 0, 0, 1, 0],
+    [0, 1, 1, 1, 0, 1, 0, 0],
+  ];
+
+  // Loop through each row of the matrix and set the colors
+  for (let i = 0; i < messageMatrix.length; i++) {
+    for (let j = 0; j < messageMatrix[i].length; j++) {
+      // Set LED to white if '1', else off if '0'
+      const color = messageMatrix[i][j] ? { red: 255, green: 255, blue: 255 } : { red: 0, green: 0, blue: 0 };
+      await bolt.setMatrixColor(i, j, color);
+    }
+  }
+
+  // Optionally, disconnect after you're done
+  await bolt.disconnect();
+}
+
+// Run the function to display the message
+displayMessageOnBolt().catch(console.error);
