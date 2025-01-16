@@ -29,14 +29,13 @@ async function startProgram() {
 //Navigator: Alex Jones
 	await roll(0, 50, 2);
 	await spin(90, 1);
-	await roll(90, 50, 2)
-
+	await roll(90,50,2);
 
 
 //Play Sound
 //Driver: Alex Jones
 //Navigator: Robert Tanase
-
+	await Sound.Game.Coin.play(true)
 //Figure 8
 //Driver: Robert
 //Navigator: Alex
