@@ -13,10 +13,10 @@ async function startProgram() {
 
 	await speak("Start", true);
 
-
   // Display a message on the LED matrix
      //await setDisplayText('Start', {r: 255, g: 0, b: 0 }, 0
 	await scrollMatrixText('Start', { r: 66, g: 56, b: 255 }, 30, true)
+
 
 
 
@@ -39,6 +39,21 @@ async function startProgram() {
 //Play Sound
 //Driver: Alex Jones
 //Navigator: Robert Tanase
+
+
+
+
+
+//Figure Eight
+//Driver: Robert Tanase
+//Navigator: Alex Jones
+
+
+
+//Star
+//Driver: Alex Jones
+//Navigator: Robert Tanase
+
 
 
 //End Program
