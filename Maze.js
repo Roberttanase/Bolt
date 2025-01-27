@@ -18,18 +18,10 @@ async function startProgram() {
 //LED's turn Green
 //Driver: Robert Tanase
 //Navigator: Alex Jones
-	async function moveForward(distanceInInches) {
-		const speed = 50;
-		const heading = 0;
-		await delay(1);
- 		const duration = distanceInInches * 1;
-		await roll(0, 50, 2.7);
-	}
 	await delay(1);
-	await moveForward(5);
-/*	await roll(0, 50, 2);
-	await moveForward(2.5)
-*/
+	await roll((getHeading() + 0), 65, 2);
+	await delay(1);
+	setMainLed({ r: 0, g: 255, b: 0 });
 
 //Sound #1 Checkpoint
 //Bolt makes sound of choice - Update Sound
