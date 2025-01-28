@@ -22,7 +22,6 @@ async function startProgram() {
 	await roll((getHeading() + 0), 25, 7.5);
 	await delay(1);
 	setMainLed({ r: 0, g: 255, b: 0 });
-
 //Sound #1 Checkpoint
 //Bolt makes sound of choice - Update Sound
 //Driver: Alex Jones
