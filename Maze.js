@@ -27,15 +27,15 @@ async function startProgram() {
 //Bolt makes sound of choice - Update Sound
 //Driver: Alex Jones
 //Navigator: Robert Tanase
-/*
+
 	await delay(1);
  	await spin(90, 1);
 	await delay(1);
-	await roll((getHeading() + 0), 35, 2.9);
+	await roll((getHeading() + 0), 37, 3.1);
 	await delay(1);
 	await spin(90,1);
 	await delay(1);
-	await roll((getHeading() + 0), 34, 1.6);
+	await roll((getHeading() + 0), 35, 1.9);
 	await delay(1);
 	await Sound.Game.Coin.play(true);
 	await delay(1);
@@ -46,7 +46,7 @@ async function startProgram() {
 //Navigator: Alex Jones
 
 
- 	await spin(35, 1);
+ 	await spin(45, 1);
 	await delay(1);
 	await roll((getHeading() + 0), 35, 2.2);
 	await delay(1);
@@ -60,11 +60,11 @@ async function startProgram() {
 //Navigator: Robert Tanase
 	await spin(-90, 1);
 	await delay(1);
-	await roll((getHeading() + 0), 35, 1.1);
+	await roll((getHeading() + 0), 39, 1.1);
 	await delay(1);
 	await spin(-90, 1);
 	await delay(1);
-	await roll((getHeading() + 0), 35, 1.6);
+	await roll((getHeading() + 0), 35, 1.9);
 	await delay(1);
 	await Sound.Animal.Cat.play(true);
 	await delay(1);
@@ -73,13 +73,13 @@ async function startProgram() {
 //LED's turn Purple
 //Driver: Robert Tanase
 //Navigator: Alex Jones
-	await spin(90, 1);
+	await spin(75, 1);
 	await delay(1);
-	await roll((getHeading() + 0), 35, 1.1);
+	await roll((getHeading() + 0), 38, 1.5);
 	await delay(1);
-	await spin(40, 1);
+	await spin(60, 1);
 	await delay(1);
-	await roll((getHeading() + 0), 35, 1.4);
+	await roll((getHeading() + 0), 41, 1);
 	await delay(1);
 	setMainLed({ r: 159, g: 43, b: 104 });
 
@@ -88,6 +88,18 @@ async function startProgram() {
 //Bolt makes sound of choice - Update Sound
 //Driver: Alex Jones
 //Navigator: Robert Tanase
+
+	await delay(1);
+	await spin(-90, 1);
+	await delay(1);
+	await roll((getHeading() + 0), 35, 1.5);
+	await delay(1);
+	await spin(-90, 1);
+	await delay(1);
+	await roll((getHeading() + 0), 40, 1.5);
+	await delay(1);
+	await Sound.Animal.Bear.play(true);
+
 
 
 //Blue Checkpoint
@@ -103,7 +115,7 @@ async function startProgram() {
 //Driver: Alex Jones
 //Navigator: Robert Tanase
 
-*/
+
 
 //End Program
 }
