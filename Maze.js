@@ -89,16 +89,7 @@ async function startProgram() {
 //Driver: Alex Jones
 //Navigator: Robert Tanase
 
-	await delay(1);
-	await spin(-90, 1);
-	await delay(1);
-	await roll((getHeading() + 0), 35, 1.4);
-	await delay(1);
-	await spin(-90, 1);
-	await delay(1);
-	await roll((getHeading() + 0), 40, 1.4);
-	await delay(1);
-	await Sound.Animal.Bear.play(true);
+
 
 
 
@@ -107,23 +98,13 @@ async function startProgram() {
 //Driver: Robert Tanase
 //Navigator: Alex Jones
 
-	await delay(1);
-	await spin(-45, 1);
-	await delay(1);
-	await roll((getHeading() + 0), 35, 2);
-	setMainLed({ r: 0, g: 0, b: 255 });
+
 //Finished and say finished
 //Bolt will say Finished across the LED's and Say Finished out loud
 //Driver: Alex Jones
 //Navigator: Robert Tanase
 
 
-	await delay(1);
-	await spin(45, 1);
-	await delay(1);
-	await roll((getHeading() + 0), 40, 2.5);
-	await speak("Finished", true);
-	await scrollMatrixText('finished', { r: 66, g: 56, b: 255 }, 30, true);
 
 
 
